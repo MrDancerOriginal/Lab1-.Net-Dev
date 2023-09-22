@@ -8,8 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\JonDou9000.TaskPlanner.Domain.Logic\JonDou9000.TaskPlanner.Domain.Logic.csproj" />
     <ProjectReference Include="..\JonDou9000.TaskPlanner.Domain.Models\JonDou9000.TaskPlanner.Domain.Models.csproj" />
+    <ProjectReference Include="..\TaskPlanner.DataAccess.Abstractions\TaskPlanner.DataAccess.Abstractions.csproj" />
+    <ProjectReference Include="..\TaskPlanner.DataAccess\TaskPlanner.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

@@ -18,8 +18,9 @@ using System.Threading.Tasks;
 
 
 namespace JonDou9000.TaskPlanner.Domain.Models.Models;
-public class WorkItem
+public class WorkItem : ICloneable
 {
+    public Guid Id { get; set; }
     public DateTime CreationDate { get; set; }
     public DateTime DueDate { get; set; }
     public Priority Priority { get; set; }
@@ -27,6 +28,18 @@ public class WorkItem
     public string Title { get; set; }
     public string Description { get; set; }
     public bool IsCompleted { get; set; }
+
+    public object Clone() => new WorkItem()
+    {
+        Id = Id,
+        CreationDate = CreationDate,
+        DueDate = DueDate,
+        Priority = Priority,
+        Complexity = Complexity,
+        Title = Title,
+        Description = Description,
+        IsCompleted = IsCompleted,
+    };
 
     public override string ToString()
     {
